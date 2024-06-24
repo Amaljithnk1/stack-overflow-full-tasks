@@ -12,7 +12,7 @@ import { setCurrentUser } from "../../actions/currentUser";
 
 const Navbar = () => {
   const dispatch = useDispatch();
-  var User = useSelector((state) => state.currentUserReducer);
+  const User = useSelector((state) => state.currentUserReducer);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -29,8 +29,11 @@ const Navbar = () => {
         handleLogout();
       }
     }
-    dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
-  }, [User?.token, dispatch]);
+    const storedUser = localStorage.getItem("Profile");
+    if (storedUser) {
+      dispatch(setCurrentUser(JSON.parse(storedUser)));
+    }
+  }, [User?.token, dispatch, navigate]);
 
   return (
     <nav className="main-nav">
@@ -40,13 +43,13 @@ const Navbar = () => {
             <img src={logo} alt="logo" />
           </Link>
           <Link to="/" className="nav-item nav-btn res-nav">
-            <span>About</span>
+            About
           </Link>
           <Link to="/" className="nav-item nav-btn res-nav">
-            <span>Products</span>
+            Products
           </Link>
           <Link to="/" className="nav-item nav-btn res-nav">
-            <span>For Teams</span>
+            For Teams
           </Link>
           <form>
             <input type="text" placeholder="Search..." />

@@ -112,7 +112,7 @@ const AskQuestion = () => {
     }
   };
 
-  const updateActiveFormats = () => {
+  const updateActiveFormats = useCallback(() => {
     const selection = window.getSelection();
     const range = selection.rangeCount > 0 ? selection.getRangeAt(0) : null;
     const parentElement = range ? (range.startContainer.nodeType === 3 ? range.startContainer.parentElement : range.startContainer) : null;
@@ -124,7 +124,7 @@ const AskQuestion = () => {
       orderedList: document.queryCommandState("insertOrderedList"),
       unorderedList: parentElement && getClosestElement(parentElement, "ul") !== null,
     });
-  };
+  }, []);
 
   const handleKeyDown = useCallback((e) => {
     const selection = window.getSelection();
@@ -184,7 +184,7 @@ const AskQuestion = () => {
     } else if (e.key === "Backspace") {
       updateActiveFormats();
     }
-  }, []);
+  }, [updateActiveFormats]);
 
   const handleClick = useCallback(() => {
     const selection = window.getSelection();
@@ -194,7 +194,7 @@ const AskQuestion = () => {
     const parentElement = range.startContainer.parentElement;
     setInCodeBlock(parentElement.nodeName === "CODE" || getClosestElement(range.startContainer, "pre"));
     updateActiveFormats();
-  }, []);
+  }, [updateActiveFormats]);
 
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
@@ -203,7 +203,7 @@ const AskQuestion = () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("click", handleClick);
     };
-  }, [handleClick]);
+  }, [handleKeyDown, handleClick]);
 
   return (
     <div className="ask-question">
