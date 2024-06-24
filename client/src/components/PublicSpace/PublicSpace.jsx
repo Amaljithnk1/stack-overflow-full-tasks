@@ -20,7 +20,7 @@ const PublicSpace = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get('https://stack-overflow-clone-1-pmzp.onrender.com/public-posts');
+      const response = await axios.get('https://stack-overflow-full-tasks.onrender.com/public-posts');
       setPosts(response.data);
     } catch (error) {
       console.error('Error fetching posts:', error);
@@ -48,7 +48,7 @@ const PublicSpace = () => {
     if (video) formData.append('video', video);
 
     try {
-      const response = await axios.post('https://stack-overflow-clone-1-pmzp.onrender.com/public-posts', formData, {
+      const response = await axios.post('https://stack-overflow-full-tasks.onrender.com/public-posts', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}`,
@@ -82,7 +82,7 @@ const PublicSpace = () => {
   const handleDelete = async (postId) => {
     const token = user.token;
     try {
-      await axios.delete(`https://stack-overflow-clone-1-pmzp.onrender.com/${postId}`, {
+      await axios.delete(`https://stack-overflow-full-tasks.onrender.com/${postId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -136,7 +136,7 @@ const PublicSpace = () => {
             <div className="post-header">
               <div className="post-user-info">
                 {post.creator && post.creator.avatar && (
-                  <img src={`https://stack-overflow-clone-1-pmzp.onrender.com/${post.creator.avatar}`} alt="Avatar" className="post-avatar" />
+                  <img src={`https://stack-overflow-full-tasks.onrender.com/${post.creator.avatar}`} alt="Avatar" className="post-avatar" />
                 )}
                 {post.creator && <p className="post-author">{post.creator.name}</p>}
               </div>
@@ -148,10 +148,10 @@ const PublicSpace = () => {
             </div>
             <p>{renderTextWithLineBreaks(post.text)}</p>
             {post.imageUrl && (
-              <img src={`https://stack-overflow-clone-1-pmzp.onrender.com/${post.imageUrl}`} alt="Post" />
+              <img src={`https://stack-overflow-full-tasks.onrender.com/${post.imageUrl}`} alt="Post" />
             )}
             {post.videoUrl && (
-              <CustomVideoPlayer videoSrc={`https://stack-overflow-clone-1-pmzp.onrender.com/${post.videoUrl}`} /> 
+              <CustomVideoPlayer videoSrc={`https://stack-overflow-full-tasks.onrender.com/${post.videoUrl}`} /> 
             )}
             <small>{new Date(post.createdAt).toLocaleString()}</small>
           </div>

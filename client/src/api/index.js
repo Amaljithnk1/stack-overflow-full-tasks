@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://stack-overflow-clone-1-pmzp.onrender.com",
+  baseURL: "https://stack-overflow-full-tasks.onrender.com",
 });
 
 API.interceptors.request.use((req) => {
