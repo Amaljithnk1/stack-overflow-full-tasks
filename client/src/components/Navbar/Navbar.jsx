@@ -7,7 +7,6 @@ import logo from "../../assets/logo.png";
 import search from "../../assets/search-solid.svg";
 import Avatar from "../../components/Avatar/Avatar";
 import "./Navbar.css";
-import bars from "../../assets/bars-solid.svg";
 import { setCurrentUser } from "../../actions/currentUser";
 
 const Navbar = () => {
@@ -15,11 +14,11 @@ const Navbar = () => {
   const User = useSelector((state) => state.currentUserReducer);
   const navigate = useNavigate();
 
-  const handleLogout = () => {
+  const handleLogout = useCallback(() => {
     dispatch({ type: "LOGOUT" });
     navigate("/");
     dispatch(setCurrentUser(null));
-  };
+  }, [dispatch, navigate]);
 
   useEffect(() => {
     const token = User?.token;
@@ -33,7 +32,7 @@ const Navbar = () => {
     if (storedUser) {
       dispatch(setCurrentUser(JSON.parse(storedUser)));
     }
-  }, [User?.token, dispatch, navigate]);
+  }, [User?.token, dispatch, handleLogout]);
 
   return (
     <nav className="main-nav">
