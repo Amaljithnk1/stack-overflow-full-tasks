@@ -82,7 +82,7 @@ const PublicSpace = () => {
   const handleDelete = async (postId) => {
     const token = user.token;
     try {
-      await axios.delete(`https://stack-overflow-full-tasks.onrender.com/${postId}`, {
+      await axios.delete(`https://stack-overflow-full-tasks.onrender.com/public-posts/${postId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
