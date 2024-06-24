@@ -1,0 +1,304 @@
+.home-container-1 {
+  min-height: 100vh;
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0% auto;
+  
+}
+
+.home-container-2 {
+  max-width: 1100px;
+  width: calc(100% - 164px);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.App.night {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.App.night .left-sidebar {
+  width: 164px;
+  box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+  background-color: #1e1e1e;
+  height: auto;
+  min-height: 100vh;
+  transition: box-shadow ease-in-out 0.1s, transform ease-in-out 0.1s;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
+.App.night .right-sidebar {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.App.night .side-nav-links {
+  text-decoration: none;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10px;
+  transition: 0.2s;
+ 
+}
+
+.App.night .active {
+  font-weight: bolder;
+  color: #ff9800;
+  background-color: #333333;
+  border-right: solid 3px #ff9800;
+  
+}
+
+.App.night .widget-tags-div p {
+  padding: 5px;
+  background-color: #424242;
+  color: #4fc3f7;
+  border-radius: 2px;
+  font-size: 13px;
+  
+}
+
+.App.night .widget-tags h4 {
+  margin: 0%;
+  padding: 15px;
+  background-color: #333333;
+  border: solid 1px #424242;
+  font-size: 13px;
+  color: #e0e0e0;
+  
+}
+
+.App.night .widget {
+  margin-top: 10px;
+  box-shadow: 3px 3px 10px rgb(0 0 0 / 5%), -3px -3px 10px rgb(0 0 0 / 5%);
+  color: #000000;
+  
+}
+
+.App.night .widget h4 {
+  background-color: #333333;
+  margin: 0%;
+  padding: 15px;
+  border: solid 1px #424242;
+  font-size: 13px;
+  color: #ffffff;
+  
+}
+
+.App.night .display-question-container {
+  min-height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #2b2b2b;
+  border-bottom: solid 1px #424242;
+}
+
+.App.night .question-title-link {
+  text-decoration: none;
+  color: #4fc3f7;
+  transition: 0.3s;
+}
+
+.App.night .question-title-link:hover {
+  color: #ff9800;
+}
+
+.App.night .display-tags-time .display-tags p {
+  margin: 2px;
+  padding: 4px;
+  font-size: 13px;
+  background-color: #424242;
+  color: #e0e0e0;
+}
+
+.App.night .tag p {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 17px;
+}
+
+.App.night .tag h5 {
+  display: inline-block;
+  margin: 10px 0px;
+  padding: 5px 5px;
+  background-color: #4fc3f7;
+  color: #1e1e1e;
+}
+
+.App.night .tag {
+  padding: 10px;
+  border: solid 1px #4fc3f7;
+  border-radius: 2px;
+}
+
+.App.night .user-profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: #e0e0e0;
+}
+
+.App.night .user-profile-link h3 {
+  padding: 10px 13px;
+  background-color: #ff9800;
+  border-radius: 50%;
+}
+
+.App.night .public-space-container {
+  min-height: 100vh;
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0% auto;
+  color: #e0e0e0;
+}
+
+.App.night .public-space-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.App.night .public-space-post {
+  padding: 10px;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background: #2b2b2b;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.App.night .public-space-post small {
+  color: #b0b0b0;
+  display: block;
+  margin-top: 10px;
+}
+
+.App.night .post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+}
+
+.App.night .public-space-post {
+  margin: 0 0 10px 0;
+  color: #e0e0e0;
+}
+
+.App.night .votes-icon {
+  font-size: 40px;
+  cursor: pointer;
+  filter: brightness(0) saturate(100%) invert(34%) sepia(58%) saturate(635%) hue-rotate(74deg) brightness(92%) contrast(89%);
+}
+
+.App.night .question-details-container .question-body pre {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.App.night .ask-question {
+  min-height: 80vh;
+  background-color: #121212;
+}
+
+.App.night .ask-ques-container form .ask-form-container {
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 3px;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 5%), 0 20px 48px rgb(0 0 0 / 5%), 0 1px 4px rgb(0 0 0 / 10%);
+}
+
+.App.night .auth-section {
+  min-height: 100vh;
+  margin: 0% auto;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App.night .auth-container-2 form {
+  width: 100%;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 5%), 0 20px 48px rgb(0 0 0 / 5%), 0 1px 4px rgb(0 0 0 / 10%);
+}
+
+.App.night .forgot-password-link {
+  color: #4fc3f7;
+}
+
+.App.night .forgot-password-link:hover {
+  color: #ff9800;
+}
+
+.App.night .forgot-password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  padding: 20px;
+}
+
+.App.night .reset-password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #121212;
+  padding: 20px;
+}
+
+.App.night .reset-password-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.App.night .reset-password-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.App.night .reset-password-container label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #e0e0e0;
+}
+
+@media screen and (max-width: 760px) {
+  .home-container-2 {
+    max-width: 100%;
+    width: 100%;
+  }
+}

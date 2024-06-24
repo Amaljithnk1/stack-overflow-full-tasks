@@ -1,0 +1,30 @@
+.login-history-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .login-history-container h2 {
+    margin-bottom: 15px;
+  }
+  
+  .login-history-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .login-history-container li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .login-history-container li:last-child {
+    border-bottom: none;
+  }
+  
+  .login-history-container p {
+    margin: 5px 0;
+  }
+  
